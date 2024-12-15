@@ -3,7 +3,8 @@
 
 test_add_new_book_add_two_books: проверка добавления двух книг
 test_add_new_book_already_added_book: негативная проверка, проверка повторного добавления книги
-test_add_new_book_invalid_length: проверка количества символов в названии книги 
+test_add_new_book_invalid_length_max_limit: проверка на максимальное символов в названии книги 
+test_add_new_book_invalid_length_min_limit: проверка на минимальное символов в названии книги 
 test_set_book_genre_correct_genre: проверка на добавление жанра для книги 
 test_set_book_genre_invalid_book: негативная проверка, проверка установки жанра несуществующей книге
 test_set_book_genre_invalid_genre: негативная проверка, проверка установки несуществующего жанра

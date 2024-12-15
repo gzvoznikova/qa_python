@@ -31,9 +31,15 @@ class TestBooksCollector:
         assert collector.get_books_genre() == {'Гордость и предубеждение': ''}
 
 
-    def test_add_new_book_invalid_length(self):  # Проверка ограничения на 40 и 0 символов
-        book = "Гордость и предубеждение и зомби"
-        assert 0 < len(book) < 40
+    def test_add_new_book_invalid_length_max_limit(self):  # Проверка ограничения на 40  символов
+        collector = BooksCollector()
+        collector.add_new_book('Гордость и предубеждение и зомбиГордость и предубеждение и зомби')
+        assert collector.get_books_genre() == {}
+
+    def test_add_new_book_invalid_length_min_limit(self):# Проверка ограничения на  0 символов
+        collector = BooksCollector()
+        collector.add_new_book('')
+        assert collector.get_books_genre() == {}
 
     def test_set_book_genre_correct_genre(self):# Проверка установки жанра  книге
         collector = BooksCollector()
